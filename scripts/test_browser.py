@@ -1,6 +1,7 @@
 """Run the actual notebook in a headless browser against the built static site."""
 
 from functools import partial
+from contextlib import suppress
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import os
 from pathlib import Path
@@ -35,6 +36,7 @@ def main():
                 environment["LD_LIBRARY_PATH"] = os.pathsep.join(
                     filter(None, [str(Path(sys.prefix) / "lib"), environment.get("LD_LIBRARY_PATH")])
                 )
+                environment["FONTCONFIG_FILE"] = str(Path(sys.prefix) / "etc/fonts/fonts.conf")
             browser = playwright.chromium.launch(env=environment)
             page = browser.new_page(viewport={"width": 1440, "height": 1000})
             page.on("console", lambda message: messages.append(f"{message.type}: {message.text}"))
@@ -49,7 +51,8 @@ def main():
                 page.get_by_role("menuitem", name="Run", exact=True).click()
                 page.get_by_role("menuitem", name="Run All Cells", exact=True).click()
                 page.wait_for_function(
-                    """marker => Array.from(document.querySelectorAll('.jp-OutputArea-output'))
+                    """marker => document.querySelector('.jp-OutputArea-error') ||
+                        Array.from(document.querySelectorAll('.jp-OutputArea-output'))
                         .some(output => output.textContent.includes(marker))""",
                     arg=MARKER,
                     timeout=600_000,
@@ -57,11 +60,14 @@ def main():
                 errors = page.locator(".jp-OutputArea-error").all_text_contents()
                 assert not errors, "\n".join(errors)
                 assert page.locator(".jp-OutputArea-output img").count() >= 1, "Missing plot output"
-                print("JupyterLite / Pyodide: all notebook cells passed, including HDF5 and plots.")
+                print("JupyterLite / Xeus-Python: all notebook cells passed, including HDF5 and plots.")
             finally:
-                page.screenshot(path=str(artifacts / "notebook.png"), full_page=True)
                 (artifacts / "console.log").write_text("\n".join(messages))
-                (artifacts / "page.html").write_text(page.content())
+                # Preserve the original test failure even if Chromium has crashed.
+                with suppress(Exception):
+                    page.screenshot(path=str(artifacts / "notebook.png"), full_page=True)
+                with suppress(Exception):
+                    (artifacts / "page.html").write_text(page.content())
                 browser.close()
     finally:
         server.shutdown()

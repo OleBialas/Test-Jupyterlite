@@ -1,7 +1,12 @@
 {
   "jupyter-config-data": {
     "appName": "Neuroscience Demo",
-    "defaultKernelName": "python",
-    "enableMemoryStorage": true
+    "defaultKernelName": "xpython (neuroscience-xeus)",
+    "enableMemoryStorage": true,
+    "settingsOverrides": {
+      "@jupyterlab/notebook-extension:tracker": {
+        "windowingMode": "none"
+      }
+    }
   }
 }

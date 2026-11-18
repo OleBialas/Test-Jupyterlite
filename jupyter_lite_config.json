@@ -1,7 +1,10 @@
 {
   "LiteBuildConfig": {
-    "contents": ["content"],
+    "contents": ["_site_content"],
     "output_dir": "_output"
+  },
+  "XeusAddon": {
+    "environment_file": ["environment.yml", "environment-runtime.yml"]
   },
   "PyodideAddon": {
     "pyodide_url": "https://github.com/pyodide/pyodide/releases/download/314.0.8/pyodide-314.0.8.tar.bz2"

@@ -16,6 +16,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
@@ -24,14 +27,21 @@ jobs:
           pixi-version: v0.84.1
           cache: true
           locked: true
+      - name: Cache WebAssembly environments and packages
+        uses: actions/cache@v4
+        with:
+          path: .cache/xeus
+          key: wasm-${{ runner.os }}-${{ hashFiles('environment*.yml', 'pixi.lock') }}
       - name: Execute the notebook on CPython
         run: pixi run validate
       - name: Build the static JupyterLite site
         run: pixi run build
       - name: Install the browser
         run: pixi run python -m playwright install --with-deps chromium
-      - name: Execute the notebook in JupyterLite / Pyodide
-        run: pixi run test-browser
+      - name: Execute the notebook in JupyterLite / Xeus-Python
+        run: pixi run python scripts/test_browser.py
+      - name: Check both runtime-install variants
+        run: pixi run python scripts/benchmark.py --repeats 1 --skip-rerun --variants pyodide xeus-runtime --output artifacts/runtime-smoke.json
       - name: Upload browser diagnostics
         if: failure()
         uses: actions/upload-artifact@v4

@@ -6,15 +6,17 @@ version = "0.1.0"
 
 [tasks]
 validate = "python scripts/validate_notebook.py"
-build = "jupyter lite build --contents content --output-dir _output"
+build = "python scripts/build_site.py"
 serve = { cmd = "python -m http.server 8000 --directory _output", depends-on = ["build"] }
 test-browser = { cmd = "python scripts/test_browser.py", depends-on = ["build"] }
 check = { depends-on = ["validate", "test-browser"] }
+benchmark = { cmd = "python scripts/benchmark.py", depends-on = ["build"] }
 
 [dependencies]
 python = "3.13.*"
 nodejs = "22.*"
 pip = ">=26.2.2,<27"
+micromamba = "==2.0.5"
 libglib = ">=2.90.1,<3"
 nss = ">=3.118,<4"
 nspr = ">=4.40,<5"
@@ -32,9 +34,12 @@ libxcb = ">=1.17.0,<2"
 libxkbcommon = ">=0.10.0,<0.11"
 alsa-lib = ">=1.2.16.1,<2"
 at-spi2-core = ">=2.40.3,<3"
+fontconfig = ">=2.18.3,<3"
+fonts-conda-ecosystem = ">=1,<2"
 
 [pypi-dependencies]
 jupyterlite-core = { version = "==0.8.7", extras = ["lab"] }
+jupyterlite-xeus = "==6.0.0"
 jupyterlite-pyodide-kernel = "==0.8.7"
 numpy = ">=2.2.2,<3"
 xarray = ">=2025.1,<2027"

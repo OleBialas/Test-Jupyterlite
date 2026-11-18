@@ -1,0 +1,550 @@
+{
+  "measured_at": "2026-11-18T09:58:51.408748+00:00",
+  "machine": {
+    "os": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "architecture": "x86_64",
+    "logical_cpus": 20,
+    "chromium": "159.0.8154.6"
+  },
+  "runs": [
+    {
+      "variant": "pyodide",
+      "repeat": 1,
+      "cache": "cold",
+      "status": "passed",
+      "phase": "complete",
+      "frontend_load_seconds": 1.5579084070050158,
+      "kernel_setup_seconds": 9.309,
+      "kernel_info": {
+        "implementation": "pyodide",
+        "implementation_version": "0.1.0",
+        "language_info": {
+          "codemirror_mode": {
+            "name": "python",
+            "version": 3
+          },
+          "file_extension": ".py",
+          "mimetype": "text/x-python",
+          "name": "python",
+          "nbconvert_exporter": "python",
+          "pygments_lexer": "ipython3",
+          "version": "3.8"
+        },
+        "protocol_version": "5.3",
+        "status": "ok",
+        "banner": "A WebAssembly-powered Python kernel backed by Pyodide",
+        "help_links": [
+          {
+            "text": "Python (WASM) Kernel",
+            "url": "https://pyodide.org"
+          }
+        ]
+      },
+      "installation_seconds": 8.202699999988079,
+      "installation_output": "",
+      "installation_cells": [
+        {
+          "id": "environment-setup",
+          "seconds": 8.202699999988079
+        }
+      ],
+      "cells": [
+        {
+          "id": "imports",
+          "seconds": 19.0535
+        },
+        {
+          "id": "simulate",
+          "seconds": 0.5784000000059605
+        },
+        {
+          "id": "labeled-data",
+          "seconds": 0.11630000001192092
+        },
+        {
+          "id": "hdf5-roundtrip",
+          "seconds": 0.8141000000238419
+        },
+        {
+          "id": "paired-statistics",
+          "seconds": 0.0375
+        },
+        {
+          "id": "visualize",
+          "seconds": 1.8630999999940396
+        },
+        {
+          "id": "download-and-check",
+          "seconds": 0.06629999998211861
+        }
+      ],
+      "imports_seconds": 19.0535,
+      "execution_seconds": 22.52920000001788,
+      "analysis_seconds": 3.4757000000178806,
+      "total_seconds": 40.04090000000596,
+      "versions": {
+        "python": "3.14.2",
+        "hdf5": "1.12.1",
+        "numpy": "2.4.6",
+        "xarray": "2026.2.0",
+        "h5netcdf": "1.8.3",
+        "pandas": "3.0.2",
+        "h5py": "3.13.0",
+        "neo": "0.14.6",
+        "elephant": "1.2.0",
+        "seaborn": "0.13.2",
+        "pingouin": "0.7.0",
+        "scipy": "1.18.0",
+        "matplotlib": "3.10.8",
+        "scikit-learn": "1.8.0",
+        "statsmodels": "0.14.6",
+        "quantities": "0.16.4"
+      },
+      "rerun_cells": [
+        {
+          "id": "imports",
+          "seconds": 0.103
+        },
+        {
+          "id": "simulate",
+          "seconds": 0.5596000000238418
+        },
+        {
+          "id": "labeled-data",
+          "seconds": 0.048100000023841856
+        },
+        {
+          "id": "hdf5-roundtrip",
+          "seconds": 0.7058000000119209
+        },
+        {
+          "id": "paired-statistics",
+          "seconds": 0.03339999997615814
+        },
+        {
+          "id": "visualize",
+          "seconds": 1.5063000000119209
+        },
+        {
+          "id": "download-and-check",
+          "seconds": 0.04820000001788139
+        }
+      ],
+      "rerun_seconds": 3.004400000065565,
+      "observed_wall_seconds": 44.95457457302837
+    },
+    {
+      "variant": "xeus-runtime",
+      "repeat": 1,
+      "cache": "cold",
+      "status": "passed",
+      "phase": "complete",
+      "frontend_load_seconds": 1.4996347289998084,
+      "kernel_setup_seconds": 5.42509999999404,
+      "kernel_info": {
+        "banner": "  __  _____ _   _ ___\n  \\ \\/ / _ \\ | | / __|\n   >  <  __/ |_| \\__ \\\n  /_/\\_\\___|\\__,_|___/\n\n  xeus-python: a Jupyter kernel for Python\n  Python 3.13.1",
+        "help_links": [
+          {
+            "text": "Xeus-Python Reference",
+            "url": "https://xeus-python.readthedocs.io"
+          }
+        ],
+        "implementation": "xeus-python",
+        "implementation_version": "0.19.0",
+        "language_info": {
+          "codemirror_mode": {
+            "name": "ipython",
+            "version": 3
+          },
+          "file_extension": ".py",
+          "mimetype": "text/x-python",
+          "name": "python",
+          "nbconvert_exporter": "python",
+          "pygments_lexer": "ipython3",
+          "version": "3.13.1"
+        },
+        "protocol_version": "5.6",
+        "status": "ok",
+        "supported_features": [
+          "debugger"
+        ]
+      },
+      "installation_seconds": 18.05129999998212,
+      "installation_output": "mambajs 0.24.0\n\nSpecs: python=3.13, xeus-python=0.19.0, numpy=2.4.6, scipy=1.18.0, pandas=3.0.2, matplotlib=3.10.8, h5py=3.16.0, hdf5=1.14.6, xarray=2026.2.0, h5netcdf=1.8.3, quantities=0.16.4, python-neo=0.14.6, seaborn=0.13.2, pingouin=0.7.0, scikit-learn=1.8.0, statsmodels=0.14.6, tqdm\nChannels: emscripten-forge-4x, conda-forge\n\nSolving environment...\nSolving took 2.011 seconds\n  Name                Version     Build                Channel\n----------------------------------------------------------------------------\n\u001b[0;32m+ ca-certificates\u001b[0m     2026.10.23  hbd8a1cb_0           conda-forge\n\u001b[0;32m+ certifi\u001b[0m             2026.10.23  pyhd8ed1ab_3         conda-forge\n\u001b[0;32m+ charset-normalizer\u001b[0m  3.5.1       pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ contourpy\u001b[0m           1.4.0       py313hb0228bc_0      emscripten-forge-4x\n\u001b[0;32m+ cycler\u001b[0m              0.12.1      pyhcf101f3_2         conda-forge\n\u001b[0;32m+ fonttools\u001b[0m           4.39.4      py313h6d8a2ba_2      emscripten-forge-4x\n\u001b[0;32m+ h5netcdf\u001b[0m            1.8.3       pyh5ded981_1         conda-forge\n\u001b[0;32m+ h5py\u001b[0m                3.16.0      np23py313hd540aa1_0  emscripten-forge-4x\n\u001b[0;32m+ hdf5\u001b[0m                1.14.6      ha7c90dc_0           emscripten-forge-4x\n\u001b[0;32m+ idna\u001b[0m                3.20        pyh5ded981_0         conda-forge\n\u001b[0;32m+ joblib\u001b[0m              1.6.0       py313h57e9779_0      emscripten-forge-4x\n\u001b[0;32m+ kiwisolver\u001b[0m          1.5.1       py313hb42c9ef_0      emscripten-forge-4x\n\u001b[0;32m+ littleutils\u001b[0m         0.2.4       pyhd8ed1ab_1         conda-forge\n\u001b[0;32m+ matplotlib\u001b[0m          3.10.8      pyh406a3f9_5         emscripten-forge-4x\n\u001b[0;32m+ matplotlib-base\u001b[0m     3.10.8      np23py313h2ca9bdc_5  emscripten-forge-4x\n\u001b[0;32m+ mpmath\u001b[0m              1.4.1       pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ numpy\u001b[0m               2.4.6       py313hcf5bae3_0      emscripten-forge-4x\n\u001b[0;32m+ openblas\u001b[0m            0.3.34      h69b678e_4           emscripten-forge-4x\n\u001b[0;32m+ outdated\u001b[0m            0.2.2       pyhd8ed1ab_2         conda-forge\n\u001b[0;32m+ pandas\u001b[0m              3.0.2       np23py313h1e705a5_1  emscripten-forge-4x\n\u001b[0;32m+ pandas-flavor\u001b[0m       0.8.1       pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ patsy\u001b[0m               1.0.3       py313h1804a44_0      emscripten-forge-4x\n\u001b[0;32m+ pillow\u001b[0m              13.0.0      py313hd87ed1a_0      emscripten-forge-4x\n\u001b[0;32m+ pingouin\u001b[0m            0.7.0       pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ pyparsing\u001b[0m           3.3.3       pyh5ded981_0         conda-forge\n\u001b[0;32m+ python-dateutil\u001b[0m     4.0.0       pyh5ded981_0         conda-forge\n\u001b[0;32m+ python-neo\u001b[0m          0.14.6      pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ python-tzdata\u001b[0m       2026.6      pyh5ded981_0         conda-forge\n\u001b[0;32m+ pytz\u001b[0m                2026.6      pyh5ded981_0         conda-forge\n\u001b[0;32m+ qhull\u001b[0m               2020.2      h0b0027f_1           emscripten-forge-4x\n\u001b[0;32m+ quantities\u001b[0m          0.16.4      pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ requests\u001b[0m            2.34.2      pyhcf101f3_0         conda-forge\n\u001b[0;32m+ scikit-learn\u001b[0m        1.8.0       np23py313hb9816c2_5  emscripten-forge-4x\n\u001b[0;32m+ scipy\u001b[0m               1.18.0      np23py313h8db5e5d_4  emscripten-forge-4x\n\u001b[0;32m+ seaborn\u001b[0m             0.13.2      hd8ed1ab_3           conda-forge\n\u001b[0;32m+ seaborn-base\u001b[0m        0.13.2      pyhd8ed1ab_3         conda-forge\n\u001b[0;32m+ setuptools\u001b[0m          84.2.1      pyhe730653_0         conda-forge\n\u001b[0;32m+ six\u001b[0m                 1.17.0      pyhe01879c_1         conda-forge\n\u001b[0;32m+ statsmodels\u001b[0m         0.14.6      np23py313hd8db738_2  emscripten-forge-4x\n\u001b[0;32m+ tabulate\u001b[0m            0.10.0      pyhcf101f3_0         conda-forge\n\u001b[0;32m+ threadpoolctl\u001b[0m       3.8.0       pyhc455866_0         conda-forge\n\u001b[0;32m+ tqdm\u001b[0m                4.70.1      pyhfa0c392_0         conda-forge\n\u001b[0;32m+ urllib3\u001b[0m             2.8.0       pyh5ded981_1         conda-forge\n\u001b[0;32m+ xarray\u001b[0m              2026.2.0    pyhcf101f3_0         conda-forge\n\u001b[0;32m+ zlib\u001b[0m                1.3.2       h8b79025_0           emscripten-forge-4x\n\u001b[0;31m- pip\u001b[0m                 26.2.2      pyh145f28c_0         conda-forge\nmambajs 0.24.0\n\nProcess pip requirements ...\n\nRequirement neo already satisfied.\nRequirement numpy already satisfied.\nRequirement quantities already satisfied.\nRequirement scipy already satisfied.\nRequirement six already satisfied.\nRequirement tqdm already satisfied.\nSuccessfully installed elephant-1.2.0\n",
+      "installation_cells": [
+        {
+          "id": "environment-setup",
+          "seconds": 17.67379999998212
+        },
+        {
+          "id": "install-elephant",
+          "seconds": 0.3775
+        }
+      ],
+      "cells": [
+        {
+          "id": "imports",
+          "seconds": 31.23009999999404
+        },
+        {
+          "id": "simulate",
+          "seconds": 1.0790999999940396
+        },
+        {
+          "id": "labeled-data",
+          "seconds": 0.21460000002384186
+        },
+        {
+          "id": "hdf5-roundtrip",
+          "seconds": 1.456699999988079
+        },
+        {
+          "id": "paired-statistics",
+          "seconds": 0.046700000017881396
+        },
+        {
+          "id": "visualize",
+          "seconds": 2.1275
+        },
+        {
+          "id": "download-and-check",
+          "seconds": 0.07669999998807907
+        }
+      ],
+      "imports_seconds": 31.23009999999404,
+      "execution_seconds": 36.23140000000596,
+      "analysis_seconds": 5.001300000011923,
+      "total_seconds": 59.70779999998212,
+      "versions": {
+        "python": "3.13.1",
+        "hdf5": "1.14.6",
+        "numpy": "2.4.6",
+        "xarray": "2026.2.0",
+        "h5netcdf": "1.8.3",
+        "pandas": "3.0.2",
+        "h5py": "3.16.0",
+        "neo": "0.14.6",
+        "elephant": "1.2.0",
+        "seaborn": "0.13.2",
+        "pingouin": "0.7.0",
+        "scipy": "1.18.0",
+        "matplotlib": "3.10.8",
+        "scikit-learn": "1.8.0",
+        "statsmodels": "0.14.6",
+        "quantities": "0.16.4"
+      },
+      "rerun_cells": [
+        {
+          "id": "imports",
+          "seconds": 0.11630000001192092
+        },
+        {
+          "id": "simulate",
+          "seconds": 0.7145999999940396
+        },
+        {
+          "id": "labeled-data",
+          "seconds": 0.05669999998807907
+        },
+        {
+          "id": "hdf5-roundtrip",
+          "seconds": 0.841300000011921
+        },
+        {
+          "id": "paired-statistics",
+          "seconds": 0.033099999994039536
+        },
+        {
+          "id": "visualize",
+          "seconds": 1.6705
+        },
+        {
+          "id": "download-and-check",
+          "seconds": 0.13219999998807908
+        }
+      ],
+      "rerun_seconds": 3.564699999988079,
+      "observed_wall_seconds": 65.09064127400052
+    },
+    {
+      "variant": "xeus-prebuilt",
+      "repeat": 1,
+      "cache": "cold",
+      "status": "passed",
+      "phase": "complete",
+      "frontend_load_seconds": 1.8152635089936666,
+      "kernel_setup_seconds": 10.236899999976158,
+      "kernel_info": {
+        "banner": "  __  _____ _   _ ___\n  \\ \\/ / _ \\ | | / __|\n   >  <  __/ |_| \\__ \\\n  /_/\\_\\___|\\__,_|___/\n\n  xeus-python: a Jupyter kernel for Python\n  Python 3.13.1",
+        "help_links": [
+          {
+            "text": "Xeus-Python Reference",
+            "url": "https://xeus-python.readthedocs.io"
+          }
+        ],
+        "implementation": "xeus-python",
+        "implementation_version": "0.19.0",
+        "language_info": {
+          "codemirror_mode": {
+            "name": "ipython",
+            "version": 3
+          },
+          "file_extension": ".py",
+          "mimetype": "text/x-python",
+          "name": "python",
+          "nbconvert_exporter": "python",
+          "pygments_lexer": "ipython3",
+          "version": "3.13.1"
+        },
+        "protocol_version": "5.6",
+        "status": "ok",
+        "supported_features": [
+          "debugger"
+        ]
+      },
+      "installation_seconds": 0.011599999994039536,
+      "installation_output": "Setup: using the preinstalled scientific environment.\n",
+      "installation_cells": [
+        {
+          "id": "environment-setup",
+          "seconds": 0.011599999994039536
+        }
+      ],
+      "cells": [
+        {
+          "id": "imports",
+          "seconds": 31.61109999999404
+        },
+        {
+          "id": "simulate",
+          "seconds": 0.717300000011921
+        },
+        {
+          "id": "labeled-data",
+          "seconds": 0.13359999999403954
+        },
+        {
+          "id": "hdf5-roundtrip",
+          "seconds": 0.9808000000119209
+        },
+        {
+          "id": "paired-statistics",
+          "seconds": 0.038900000005960465
+        },
+        {
+          "id": "visualize",
+          "seconds": 2.113699999988079
+        },
+        {
+          "id": "download-and-check",
+          "seconds": 0.09589999997615814
+        }
+      ],
+      "imports_seconds": 31.61109999999404,
+      "execution_seconds": 35.69129999998212,
+      "analysis_seconds": 4.080199999988082,
+      "total_seconds": 45.93979999995232,
+      "versions": {
+        "python": "3.13.1",
+        "hdf5": "1.14.6",
+        "numpy": "2.4.6",
+        "xarray": "2026.2.0",
+        "h5netcdf": "1.8.3",
+        "pandas": "3.0.2",
+        "h5py": "3.16.0",
+        "neo": "0.14.6",
+        "elephant": "1.2.0",
+        "seaborn": "0.13.2",
+        "pingouin": "0.7.0",
+        "scipy": "1.18.0",
+        "matplotlib": "3.10.8",
+        "scikit-learn": "1.8.0",
+        "statsmodels": "0.14.6",
+        "quantities": "0.16.4"
+      },
+      "rerun_cells": [
+        {
+          "id": "imports",
+          "seconds": 0.12490000000596047
+        },
+        {
+          "id": "simulate",
+          "seconds": 0.7032999999821186
+        },
+        {
+          "id": "labeled-data",
+          "seconds": 0.05669999998807907
+        },
+        {
+          "id": "hdf5-roundtrip",
+          "seconds": 0.8075999999940395
+        },
+        {
+          "id": "paired-statistics",
+          "seconds": 0.038400000005960465
+        },
+        {
+          "id": "visualize",
+          "seconds": 1.692
+        },
+        {
+          "id": "download-and-check",
+          "seconds": 0.07269999998807906
+        }
+      ],
+      "rerun_seconds": 3.495599999964237,
+      "observed_wall_seconds": 51.61659574799705
+    },
+    {
+      "variant": "xeus-runtime",
+      "repeat": 2,
+      "cache": "cold",
+      "status": "passed",
+      "phase": "complete",
+      "frontend_load_seconds": 1.6672266150126234,
+      "kernel_setup_seconds": 6.531199999988079,
+      "kernel_info": {
+        "banner": "  __  _____ _   _ ___\n  \\ \\/ / _ \\ | | / __|\n   >  <  __/ |_| \\__ \\\n  /_/\\_\\___|\\__,_|___/\n\n  xeus-python: a Jupyter kernel for Python\n  Python 3.13.1",
+        "help_links": [
+          {
+            "text": "Xeus-Python Reference",
+            "url": "https://xeus-python.readthedocs.io"
+          }
+        ],
+        "implementation": "xeus-python",
+        "implementation_version": "0.19.0",
+        "language_info": {
+          "codemirror_mode": {
+            "name": "ipython",
+            "version": 3
+          },
+          "file_extension": ".py",
+          "mimetype": "text/x-python",
+          "name": "python",
+          "nbconvert_exporter": "python",
+          "pygments_lexer": "ipython3",
+          "version": "3.13.1"
+        },
+        "protocol_version": "5.6",
+        "status": "ok",
+        "supported_features": [
+          "debugger"
+        ]
+      },
+      "installation_seconds": 15.43330000001192,
+      "installation_output": "mambajs 0.24.0\n\nSpecs: python=3.13, xeus-python=0.19.0, numpy=2.4.6, scipy=1.18.0, pandas=3.0.2, matplotlib=3.10.8, h5py=3.16.0, hdf5=1.14.6, xarray=2026.2.0, h5netcdf=1.8.3, quantities=0.16.4, python-neo=0.14.6, seaborn=0.13.2, pingouin=0.7.0, scikit-learn=1.8.0, statsmodels=0.14.6, tqdm\nChannels: emscripten-forge-4x, conda-forge\n\nSolving environment...\nSolving took 1.342 seconds\n  Name                Version     Build                Channel\n----------------------------------------------------------------------------\n\u001b[0;32m+ ca-certificates\u001b[0m     2026.10.23  hbd8a1cb_0           conda-forge\n\u001b[0;32m+ certifi\u001b[0m             2026.10.23  pyhd8ed1ab_3         conda-forge\n\u001b[0;32m+ charset-normalizer\u001b[0m  3.5.1       pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ contourpy\u001b[0m           1.4.0       py313hb0228bc_0      emscripten-forge-4x\n\u001b[0;32m+ cycler\u001b[0m              0.12.1      pyhcf101f3_2         conda-forge\n\u001b[0;32m+ fonttools\u001b[0m           4.39.4      py313h6d8a2ba_2      emscripten-forge-4x\n\u001b[0;32m+ h5netcdf\u001b[0m            1.8.3       pyh5ded981_1         conda-forge\n\u001b[0;32m+ h5py\u001b[0m                3.16.0      np23py313hd540aa1_0  emscripten-forge-4x\n\u001b[0;32m+ hdf5\u001b[0m                1.14.6      ha7c90dc_0           emscripten-forge-4x\n\u001b[0;32m+ idna\u001b[0m                3.20        pyh5ded981_0         conda-forge\n\u001b[0;32m+ joblib\u001b[0m              1.6.0       py313h57e9779_0      emscripten-forge-4x\n\u001b[0;32m+ kiwisolver\u001b[0m          1.5.1       py313hb42c9ef_0      emscripten-forge-4x\n\u001b[0;32m+ littleutils\u001b[0m         0.2.4       pyhd8ed1ab_1         conda-forge\n\u001b[0;32m+ matplotlib\u001b[0m          3.10.8      pyh406a3f9_5         emscripten-forge-4x\n\u001b[0;32m+ matplotlib-base\u001b[0m     3.10.8      np23py313h2ca9bdc_5  emscripten-forge-4x\n\u001b[0;32m+ mpmath\u001b[0m              1.4.1       pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ numpy\u001b[0m               2.4.6       py313hcf5bae3_0      emscripten-forge-4x\n\u001b[0;32m+ openblas\u001b[0m            0.3.34      h69b678e_4           emscripten-forge-4x\n\u001b[0;32m+ outdated\u001b[0m            0.2.2       pyhd8ed1ab_2         conda-forge\n\u001b[0;32m+ pandas\u001b[0m              3.0.2       np23py313h1e705a5_1  emscripten-forge-4x\n\u001b[0;32m+ pandas-flavor\u001b[0m       0.8.1       pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ patsy\u001b[0m               1.0.3       py313h1804a44_0      emscripten-forge-4x\n\u001b[0;32m+ pillow\u001b[0m              13.0.0      py313hd87ed1a_0      emscripten-forge-4x\n\u001b[0;32m+ pingouin\u001b[0m            0.7.0       pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ pyparsing\u001b[0m           3.3.3       pyh5ded981_0         conda-forge\n\u001b[0;32m+ python-dateutil\u001b[0m     4.0.0       pyh5ded981_0         conda-forge\n\u001b[0;32m+ python-neo\u001b[0m          0.14.6      pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ python-tzdata\u001b[0m       2026.6      pyh5ded981_0         conda-forge\n\u001b[0;32m+ pytz\u001b[0m                2026.6      pyh5ded981_0         conda-forge\n\u001b[0;32m+ qhull\u001b[0m               2020.2      h0b0027f_1           emscripten-forge-4x\n\u001b[0;32m+ quantities\u001b[0m          0.16.4      pyhd8ed1ab_0         conda-forge\n\u001b[0;32m+ requests\u001b[0m            2.34.2      pyhcf101f3_0         conda-forge\n\u001b[0;32m+ scikit-learn\u001b[0m        1.8.0       np23py313hb9816c2_5  emscripten-forge-4x\n\u001b[0;32m+ scipy\u001b[0m               1.18.0      np23py313h8db5e5d_4  emscripten-forge-4x\n\u001b[0;32m+ seaborn\u001b[0m             0.13.2      hd8ed1ab_3           conda-forge\n\u001b[0;32m+ seaborn-base\u001b[0m        0.13.2      pyhd8ed1ab_3         conda-forge\n\u001b[0;32m+ setuptools\u001b[0m          84.2.1      pyhe730653_0         conda-forge\n\u001b[0;32m+ six\u001b[0m                 1.17.0      pyhe01879c_1         conda-forge\n\u001b[0;32m+ statsmodels\u001b[0m         0.14.6      np23py313hd8db738_2  emscripten-forge-4x\n\u001b[0;32m+ tabulate\u001b[0m            0.10.0      pyhcf101f3_0         conda-forge\n\u001b[0;32m+ threadpoolctl\u001b[0m       3.8.0       pyhc455866_0         conda-forge\n\u001b[0;32m+ tqdm\u001b[0m                4.70.1      pyhfa0c392_0         conda-forge\n\u001b[0;32m+ urllib3\u001b[0m             2.8.0       pyh5ded981_1         conda-forge\n\u001b[0;32m+ xarray\u001b[0m              2026.2.0    pyhcf101f3_0         conda-forge\n\u001b[0;32m+ zlib\u001b[0m                1.3.2       h8b79025_0           emscripten-forge-4x\n\u001b[0;31m- pip\u001b[0m                 26.2.2      pyh145f28c_0         conda-forge\nmambajs 0.24.0\n\nProcess pip requirements ...\n\nRequirement neo already satisfied.\nRequirement numpy already satisfied.\nRequirement quantities already satisfied.\nRequirement scipy already satisfied.\nRequirement six already satisfied.\nRequirement tqdm already satisfied.\nSuccessfully installed elephant-1.2.0\n",
+      "installation_cells": [
+        {
+          "id": "environment-setup",
+          "seconds": 14.6725
+        },
+        {
+          "id": "install-elephant",
+          "seconds": 0.7608000000119209
+        }
+      ],
+      "cells": [
+        {
+          "id": "imports",
+          "seconds": 24.27680000001192
+        },
+        {
+          "id": "simulate",
+          "seconds": 0.4293000000119209
+        },
+        {
+          "id": "labeled-data",
+          "seconds": 0.08770000001788139
+        },
+        {
+          "id": "hdf5-roundtrip",
+          "seconds": 0.5790999999940395
+        },
+        {
+          "id": "paired-statistics",
+          "seconds": 0.031099999994039534
+        },
+        {
+          "id": "visualize",
+          "seconds": 1.3299000000059604
+        },
+        {
+          "id": "download-and-check",
+          "seconds": 0.04460000002384186
+        }
+      ],
+      "imports_seconds": 24.27680000001192,
+      "execution_seconds": 26.778500000059605,
+      "analysis_seconds": 2.501700000047684,
+      "total_seconds": 48.7430000000596,
+      "versions": {
+        "python": "3.13.1",
+        "hdf5": "1.14.6",
+        "numpy": "2.4.6",
+        "xarray": "2026.2.0",
+        "h5netcdf": "1.8.3",
+        "pandas": "3.0.2",
+        "h5py": "3.16.0",
+        "neo": "0.14.6",
+        "elephant": "1.2.0",
+        "seaborn": "0.13.2",
+        "pingouin": "0.7.0",
+        "scipy": "1.18.0",
+        "matplotlib": "3.10.8",
+        "scikit-learn": "1.8.0",
+        "statsmodels": "0.14.6",
+        "quantities": "0.16.4"
+      },
+      "rerun_cells": [
+        {
+          "id": "imports",
+          "seconds": 0.06879999998211861
+        },
+        {
+          "id": "simulate",
+          "seconds": 0.43
+        },
+        {
+          "id": "labeled-data",
+          "seconds": 0.0435
+        },
+        {
+          "id": "hdf5-roundtrip",
+          "seconds": 0.538800000011921
+        },
+        {
+          "id": "paired-statistics",
+          "seconds": 0.028299999982118608
+        },
+        {
+          "id": "visualize",
+          "seconds": 1.1239000000059605
+        },
+        {
+          "id": "download-and-check",
+          "seconds": 0.04509999999403953
+        }
+      ],
+      "rerun_seconds": 2.278399999976158,
+      "observed_wall_seconds": 52.92917575800675
+    }
+  ],
+  "build": {
+    "environments": [
+      {
+        "name": "neuroscience-xeus",
+        "cache_hit": false,
+        "resolve_download_install_seconds": 4.737776341004064,
+        "last_uncached_install_seconds": 4.737776341004064
+      },
+      {
+        "name": "neuroscience-xeus-runtime",
+        "cache_hit": true,
+        "resolve_download_install_seconds": 1.2099917512387037e-06,
+        "last_uncached_install_seconds": 2.599489915999584
+      }
+    ],
+    "pack_and_site_build_seconds": 44.29347297101049,
+    "total_build_seconds": 49.09138915600488
+  }
+}

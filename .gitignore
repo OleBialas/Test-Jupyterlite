@@ -4,6 +4,7 @@
 
 # Generated site, browser diagnostics, and local notebook files
 _output/
+_site_content/
 .cache/
 .jupyterlite.doit.db*
 artifacts/

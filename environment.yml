@@ -1,0 +1,29 @@
+# Browser runtime, not the native Pixi build environment.
+# jupyterlite-xeus creates this environment with micromamba at build time.
+name: neuroscience-xeus
+channels:
+  - https://repo.prefix.dev/emscripten-forge-4x
+  - https://repo.prefix.dev/conda-forge
+dependencies:
+  - python=3.13
+  - xeus-python=0.19.0
+  - numpy=2.4.6
+  - scipy=1.18.0
+  - pandas=3.0.2
+  - matplotlib=3.10.8
+  # This Wasm h5py build matches HDF5 1.14.6; older 3.13 builds abort.
+  - h5py=3.16.0
+  - hdf5=1.14.6
+  - xarray=2026.2.0
+  - h5netcdf=1.8.3
+  - quantities=0.16.4
+  - python-neo=0.14.6
+  - seaborn=0.13.2
+  - pingouin=0.7.0
+  - scikit-learn=1.8.0
+  - statsmodels=0.14.6
+  - tqdm
+  # Elephant has no Wasm conda build. Its official pure-Python wheel works;
+  # all its dependencies above are installed by micromamba, not pip.
+  - pip:
+      - https://files.pythonhosted.org/packages/a3/c3/fcb545a329d9467e20bc48de981a2d63d23dddd4ee0c560ab4b650a9fc37/elephant-1.2.0-py3-none-any.whl#sha256=55e32558387dbedbc7322cad42f203502e517fb136e3767233cf1dd5e94ae060
