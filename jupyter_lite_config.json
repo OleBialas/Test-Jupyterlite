@@ -1,0 +1,9 @@
+{
+  "LiteBuildConfig": {
+    "contents": ["content"],
+    "output_dir": "_output"
+  },
+  "PyodideAddon": {
+    "pyodide_url": "https://github.com/pyodide/pyodide/releases/download/314.0.8/pyodide-314.0.8.tar.bz2"
+  }
+}

@@ -1,0 +1,52 @@
+[workspace]
+channels = ['conda-forge']
+name = "neuroscience-jupyterlite-demo"
+platforms = ['linux-64']
+version = "0.1.0"
+
+[tasks]
+validate = "python scripts/validate_notebook.py"
+build = "jupyter lite build --contents content --output-dir _output"
+serve = { cmd = "python -m http.server 8000 --directory _output", depends-on = ["build"] }
+test-browser = { cmd = "python scripts/test_browser.py", depends-on = ["build"] }
+check = { depends-on = ["validate", "test-browser"] }
+
+[dependencies]
+python = "3.13.*"
+nodejs = "22.*"
+pip = ">=26.2.2,<27"
+libglib = ">=2.90.1,<3"
+nss = ">=3.118,<4"
+nspr = ">=4.40,<5"
+atk = ">=2.38.0,<3"
+at-spi2-atk = ">=2.38.0,<3"
+dbus = ">=1.16.2,<2"
+xorg-libx11 = ">=1.8.14,<2"
+xorg-libxcomposite = ">=0.4.7,<0.5"
+xorg-libxdamage = ">=1.1.6,<2"
+xorg-libxext = ">=1.3.7,<2"
+xorg-libxfixes = ">=6.0.2,<7"
+xorg-libxrandr = ">=1.5.5,<2"
+libgbm = ">=1.1.0,<2"
+libxcb = ">=1.17.0,<2"
+libxkbcommon = ">=0.10.0,<0.11"
+alsa-lib = ">=1.2.16.1,<2"
+at-spi2-core = ">=2.40.3,<3"
+
+[pypi-dependencies]
+jupyterlite-core = { version = "==0.8.7", extras = ["lab"] }
+jupyterlite-pyodide-kernel = "==0.8.7"
+numpy = ">=2.2.2,<3"
+xarray = ">=2025.1,<2027"
+h5netcdf = "==1.8.3"
+pandas = ">=2.3,<4"
+h5py = ">=3.13,<4"
+neo = "==0.14.6"
+elephant = "==1.2.0"
+quantities = "==0.16.4"
+seaborn = "==0.13.2"
+pingouin = "==0.7.0"
+ipykernel = ">=6.29,<8"
+nbclient = ">=0.10,<0.11"
+nbformat = ">=5.10,<6"
+playwright = ">=1.50,<2"

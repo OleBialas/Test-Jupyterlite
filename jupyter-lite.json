@@ -1,0 +1,7 @@
+{
+  "jupyter-config-data": {
+    "appName": "Neuroscience Demo",
+    "defaultKernelName": "python",
+    "enableMemoryStorage": true
+  }
+}

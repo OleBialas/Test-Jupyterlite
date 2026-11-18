@@ -1,0 +1,13 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# Generated site, browser diagnostics, and local notebook files
+_output/
+.cache/
+.jupyterlite.doit.db*
+artifacts/
+__pycache__/
+.ipynb_checkpoints/
+demo_recordings.nc
+demo_spikes.h5
